@@ -105,6 +105,12 @@
     grid-template-columns: 1fr 1fr;
   }
 
+  #painel-principal{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+
   #butoes-iniciais2{
     display: flex;
     justify-content: flex-end;
@@ -115,6 +121,55 @@
     margin-top: 5px;
   }
 
-  #foto-de-perfil{
+  #perfil{
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
     border: 3px solid #068a41;
+  }
+
+  #foto-de-perfil{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 5px;
+  }
+
+  #informacoes-perfil{
+    display: inline-block;
+    margin: 5px;
+  }
+
+  #versao-sistema{
+    display: flex;
+    align-self: flex-end;
+    margin-top: 300px;
+  }
+
+  #resumo-atividades{
+    display: flex;
+    justify-content: center;
+  }
+  
+table{
+    background-color: white;
+    box-shadow: 10px 5px 5px rgb(92, 236, 140);
+  }
+  th{
+    background-color: rgb(92, 236, 140);
+  }
+
+  h2{
+    color: rgb(7, 146, 41);
+    text-align: center;
+    font-family: courier;
+  }
+  h3{
+    color: rgb(7, 146, 41);
+    text-align: center;
+    font-weight: bold;
+  }
+
+  #butao-infPes{
+    display: flex;
+    gap: 15px;
   }

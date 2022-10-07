@@ -23,10 +23,10 @@
                             <a class="nav-link active" aria-current="page" href="painel-de-controle1.html">Painel de Controle</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Editar informações</a>
+                            <a class="nav-link active" aria-current="page" href="editar-informacoes.html">Editar informações</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link active" href="#">Histórico</a>
+                            <a class="nav-link active" href="historico1.html">Histórico</a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link active" href="#">Cadastro de componentes curriculares</a>
@@ -51,17 +51,32 @@
             </div>
         </div>
 
-        <div id="butoes-iniciais">
-            <div id="foto-de-perfil">
-                <div id="div-p1">
-                    <div id="div-p11">
-                        <img src="FotoDePerfil.jpg" width="150" height="150">
+        <div id="painel-principal">
+            <div id="perfil">
+                <div id="foto-de-perfil">
+                    <div><img src="FotoDePerfil.jpg" width="150" height="150"></div>
+                    <div>
+                        <p>
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                                Currículo
+                            </button>
+                        </p>
+                        <div style="min-height: 5px;">
+                            <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                                <div class="card card-body" style="width: 300px;">
+                                    <a href="#">luangomes@curriculo.linkedin</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div id="div-p12">
-                        <b>Luan Gomes Magalhães Lima | Matrícula: 473008 | IRA: 9.00</b>
-                        <a href="mailto:luangomes@alu.ufc.br"><p>luangomes@alu.ufc.br</p></a>
-                        <p><b>Curso:</b> Engenharia de Computação</p>
-                        <p><b>Créditos cursados:</b> 210</p>
+                </div>
+                <div id="informacoes-perfil">
+                    <div><b>Luan Gomes Magalhães Lima | Matrícula: 473008 | IRA: 9.00</b></div>
+                    <div><a href="mailto:luangomes@alu.ufc.br">luangomes@alu.ufc.br</a></div>
+                    <div><b>Curso:</b> Engenharia de Computação</div>
+                    <div><b>Créditos cursados:</b> 210</div>
+                    <div>
+                        <span class="badge rounded-pill text-bg-success">Ativo - 8º Semestre</span>
                     </div>
                 </div>
             </div>
@@ -107,6 +122,24 @@
                         </div>
                       </div>
                     </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                              <b>Matérias pendentes</b>
+                          </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">
+                              <ol>
+                                  <li>ECO0056 - Eletrônica Analógica</li>
+                                  <li>SBL0087 - Indentifificação de Sistemas</a></li>
+                                  <li>ECO0078 - Cana</li>
+                                  <li>SBL0078 - Qualidade de softwares</li>
+                                  <li>SBL0091 - Circuitos II</li>
+                              </ol>
+                          </div>
+                        </div>
+                      </div>
                 </div>
                 <br>
                 <h4 id="display-cor">Escolha um cor para o tema: <input type="color"></h4>
@@ -114,62 +147,79 @@
 
             <div>
                 <h3>Progresso no curso</h3>
-            <div id="div-p3">
-                <label for="file">Disciplinas obrigatórias:</label>
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">85%</div>
-                </div>
-                <label for="file">Disciplinas eletivas:</label>
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 60%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="60">60%</div>
-                </div>
-                <label for="file">Horas de estágio obrigatório:</label>
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="25">25%</div>
-                </div>
-                <label for="file">Horas complementares:</label>
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="90">90%</div>
-                </div>
-                <label for="file">Horas de extensão:</label>
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="75">75%</div>
-                </div>
-                <label for="file">Horas de programação:</label>
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 15%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="15">15%</div>
+                <div id="div-p3">
+                    <label for="file">Disciplinas obrigatórias:</label>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">85%</div>
+                    </div>
+                    <label for="file">Disciplinas eletivas:</label>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 60%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="60">60%</div>
+                    </div>
+                    <label for="file">Horas de estágio obrigatório:</label>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="25">25%</div>
+                    </div>
+                    <label for="file">Horas complementares:</label>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="90">90%</div>
+                    </div>
+                    <label for="file">Horas de extensão:</label>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="75">75%</div>
+                    </div>
+                    <label for="file">Horas de programação:</label>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 15%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="15">15%</div>
+                    </div>
                 </div>
             </div>
+            <div id="resumo-atividades">
+                <table border="1">
+                    <tr>
+                        <th>Atividades Feitas</th>
+                        <th>Atividades Pendentes</th>
+                    </tr>
+                    <tr>
+                        <td>Horas complementares</td>
+                        <td>Horas de extensão</td>
+                    </tr>
+                    <tr>
+                        <td>Prova: Química Geral</td>
+                        <td>Horas de Programação</td>
+                    </tr>
+                    <tr>
+                        <td>Atividade: Sistemas Lineares</td>
+                        <td>Horas de estágio obrigatório</td>
+                    </tr>
+                </table>       
             </div>
-
         </div> 
     </div>
-
     <br>
 
-    <table border="1">
-        <tr>
-            <th colspan="3">Resumo de Atividades</th>
-        </tr>
-        <tr>
-            <th>Atividades Feitas</th>
-            <th>Atividades Pendentes</th>
-        </tr>
-        <tr>
-            <td>Horas complementares</td>
-            <td>Horas de extensão</td>
-        </tr>
-        <tr>
-            <td>Prova: Química Geral</td>
-            <td>Horas de Programação</td>
-        </tr>
-        <tr>
-            <td>Atividade: Sistemas Lineares - 02/09</td>
-            <td>Horas de estágio obrigatório</td>
-        </tr>
-    </table>
+
+    <div id="versao-sistema">
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+            Versão do Sistema
+        </button>
+          
+        <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="staticBackdropLabel"> Novo-SIGAA versão 2.0</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <div>
+                Implementação de boostrap no projeto Novo-SIGGA. 
+                Desenvolvido para disciplina Tecnologias Web.
+                <b>Autor: Luan Gomes</b>
+              </div>
+            </div>
+        </div>
+    </div>
+
     
-   
 
     <footer>SIGAA|Copyright @ 2010 - 2022 - Superintendência de Tecnologia da Informação - UFC</footer>
 </body>
