@@ -1,208 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Histórico</title>
-    <link rel="stylesheet" href="main.css">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-    <header>UFC - SIGAA -  Sistema Integrado de Gestão de Atividades Acadêmicas</header>
-    <nav>
-        <a href="painel_de_controle.html">Painel de Controle</a>
-        <a href="perfil_do_usuario.html">Editar informações</a>
-        <a href="historico.html">Histórico</a>
-        <a href="cadastro_de_materias.html">Cadastro de Componentes Curriculares</a>
+  <body>
+    <header>
+      UFC - SIGAA - Sistema Integrado de Gestão de Atividades Acadêmicas
+    </header>
+    <nav class="navbar navbar-expand-lg bg">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="painel-de-controle.html"
+                >Painel de Controle</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="editar-informacoes.html"
+                >Editar informações</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="historico.html">Histórico</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="cadastro-de-materias.html"
+                >Cadastro de componentes curriculares</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
-    <br>
+    <h2>Histórico Escolar</h2>
+    <div
+      id="carouselExampleInterval"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="/imagens/logo_UFC.png" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <table>
+            <tr>
+              <th>Ano/Período Letivo</th>
+              <th>Componente Curricular</th>
+              <th>CH</th>
+              <th>Turma</th>
+              <th>Freq. %</th>
+              <th>Nota</th>
+              <th>Situação</th>
+            </tr>
+            <tr>
+              <th colspan="7">2019.1</th>
+            </tr>
+            <tr>
+              <td>2019.1</td>
+              <td>Introdução a Engenharia</td>
+              <td>64</td>
+              <td>01</td>
+              <td>100</td>
+              <td>8</td>
+              <td>APROVADO MÉDIA</td>
+            </tr>
+            <tr>
+              <td>2019.1</td>
+              <td>Cálculo Diferencial e Integral I</td>
+              <td>64</td>
+              <td>02</td>
+              <td>100</td>
+              <td>9</td>
+              <td>APROVADO MÉDIA</td>
+            </tr>
+            <tr>
+              <td>2019.1</td>
+              <td>Física Geral I</td>
+              <td>64</td>
+              <td>02</td>
+              <td>98</td>
+              <td>8.5</td>
+              <td>APROVADO MÉDIA</td>
+            </tr>
+            <tr>
+              <td>2019.1</td>
+              <td>Matemática Discreta para Computação</td>
+              <td>64</td>
+              <td>01</td>
+              <td>100</td>
+              <td>8.7</td>
+              <td>APROVADO MÉDIA</td>
+            </tr>
+            <tr>
+              <td>2019.1</td>
+              <td>Programação Computacional</td>
+              <td>96</td>
+              <td>02B</td>
+              <td>97.97</td>
+              <td>7.5</td>
+              <td>APROVADO MÉDIA</td>
+            </tr>
+          </table>
+        </div>
+        <div class="carousel-item">
+          <table>
+            <tr>
+              <th>Ano/Período Letivo</th>
+              <th>Componente Curricular</th>
+              <th>CH</th>
+              <th>Turma</th>
+              <th>Freq. %</th>
+              <th>Nota</th>
+              <th>Situação</th>
+            </tr>
+            <tr>
+              <th colspan="7">2019.2</th>
+            </tr>
+            <tr>
+              <td>2019.2</td>
+              <td>Técnicas de Programação</td>
+              <td>64</td>
+              <td>01</td>
+              <td>100</td>
+              <td>8.7</td>
+              <td>APROVADO MÉDIA</td>
+            </tr>
+            <tr>
+              <td>2019.2</td>
+              <td>Cálculo Diferencial e Integral II</td>
+              <td>64</td>
+              <td>02</td>
+              <td>95.31</td>
+              <td>9.5</td>
+              <td>APROVADO MÉDIA</td>
+            </tr>
+            <tr>
+              <td>2019.2</td>
+              <td>Física Geral II</td>
+              <td>64</td>
+              <td>02</td>
+              <td>98.43</td>
+              <td>8</td>
+              <td>APROVADO MÉDIA</td>
+            </tr>
+            <tr>
+              <td>2019.2</td>
+              <td>Álgebra Linear</td>
+              <td>64</td>
+              <td>02</td>
+              <td>100</td>
+              <td>10</td>
+              <td>APROVADO MÉDIA</td>
+            </tr>
+            <tr>
+              <td>2019.2</td>
+              <td>Desenho para Engenharia</td>
+              <td>64</td>
+              <td>02A</td>
+              <td>100</td>
+              <td>8.5</td>
+              <td>APROVADO MÉDIA</td>
+            </tr>
+          </table>
+        </div>
+        <div class="carousel-item">
+          <table>
+            <tr>
+              <th>Ano/Período Letivo</th>
+              <th>Componente Curricular</th>
+              <th>CH</th>
+              <th>Turma</th>
+              <th>Freq. %</th>
+              <th>Nota</th>
+              <th>Situação</th>
+            </tr>
+            <tr>
+              <th colspan="7">2020.1</th>
+            </tr>
+            <tr>
+              <td>2020.1</td>
+              <td>Estruturas de Dados</td>
+              <td>64</td>
+              <td>01</td>
+              <td>100</td>
+              <td>9.5</td>
+              <td>APROVADO MÉDIA</td>
+            </tr>
+            <tr>
+              <td>2020.1</td>
+              <td>Cálculo Vetorial</td>
+              <td>64</td>
+              <td>01</td>
+              <td>100</td>
+              <td>10</td>
+              <td>APROVADO MÉDIA</td>
+            </tr>
+            <tr>
+              <td>2020.1</td>
+              <td>Física Geral III</td>
+              <td>64</td>
+              <td>01</td>
+              <td>100</td>
+              <td>9</td>
+              <td>APROVADO MÉDIA</td>
+            </tr>
+            <tr>
+              <td>2020.1</td>
+              <td>Física Experimental II</td>
+              <td>32</td>
+              <td>01</td>
+              <td>100</td>
+              <td>10</td>
+              <td>APROVADO MÉDIA</td>
+            </tr>
+          </table>
+        </div>
+        <div class="carousel-item">
+          <table>
+            <tr>
+              <th>Ano/Período Letivo</th>
+              <th>Componente Curricular</th>
+              <th>CH</th>
+              <th>Turma</th>
+              <th>Freq. %</th>
+              <th>Nota</th>
+              <th>Situação</th>
+            </tr>
+            <tr>
+              <th colspan="7">2020.2</th>
+            </tr>
+            <tr>
+              <td>2020.2</td>
+              <td>Circuitos Elétricos I</td>
+              <td>96</td>
+              <td>01A</td>
+              <td>100</td>
+              <td>8</td>
+              <td>APROVADO MÉDIA</td>
+            </tr>
+            <tr>
+              <td>2020.2</td>
+              <td>Eletrônica Digital</td>
+              <td>96</td>
+              <td>01B</td>
+              <td>100</td>
+              <td>9</td>
+              <td>APROVADO MÉDIA</td>
+            </tr>
+            <tr>
+              <td>2020.2</td>
+              <td>Arquitetura e Organização de Computadores</td>
+              <td>64</td>
+              <td>01</td>
+              <td>100</td>
+              <td>8.8</td>
+              <td>APROVADO MÉDIA</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleInterval"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleInterval"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
 
-    <h2>Consultar Histórico Escolar</h2>
-    <table border="1">
-        <tr>
-            <th colspan="7">Histórico Escolar</th>
-        </tr>
-        <tr>
-            <th>Ano/Período Letivo</th>
-            <th>Componente Curricular</th>
-            <th>CH</th>
-            <th>Turma</th>
-            <th>Freq. %</th>
-            <th>Nota</th>
-            <th>Situação</th>
-        </tr>
-        <tr>
-            <th colspan="7">2019.1</th>
-        </tr>
-        <tr>
-            <td>2019.1</td>
-            <td>Introdução a Engenharia</td>
-            <td>64</td>
-            <td>01</td>
-            <td>100</td>
-            <td>8</td>
-            <td>APROVADO MÉDIA</td>
-        </tr>
-        <tr>
-            <td>2019.1</td>
-            <td>Cálculo Diferencial e Integral I</td>
-            <td>64</td>
-            <td>02</td>
-            <td>100</td>
-            <td>9</td>
-            <td>APROVADO MÉDIA</td>
-        </tr>
-        <tr>
-            <td>2019.1</td>
-            <td>Física Geral I</td>
-            <td>64</td>
-            <td>02</td>
-            <td>98</td>
-            <td>8.5</td>
-            <td>APROVADO MÉDIA</td>
-        </tr>
-        <tr>
-            <td>2019.1</td>
-            <td>Matemática Discreta para Computação</td>
-            <td>64</td>
-            <td>01</td>
-            <td>100</td>
-            <td>8.7</td>
-            <td>APROVADO MÉDIA</td>
-        </tr>
-        <tr>
-            <td>2019.1</td>
-            <td>Programação Computacional</td>
-            <td>96</td>
-            <td>02B</td>
-            <td>97.97</td>
-            <td>7.5</td>
-            <td>APROVADO MÉDIA</td>
-        </tr>
-        <tr>
-            <th colspan="7">2019.2</th>
-        </tr>
-        <tr>
-            <td>2019.2</td>
-            <td>Técnicas de Programação</td>
-            <td>64</td>
-            <td>01</td>
-            <td>100</td>
-            <td>8.7</td>
-            <td>APROVADO MÉDIA</td>
-        </tr>
-        <tr>
-            <td>2019.2</td>
-            <td>Cálculo Diferencial e Integral II</td>
-            <td>64</td>
-            <td>02</td>
-            <td>95.31</td>
-            <td>9.5</td>
-            <td>APROVADO MÉDIA</td>
-        </tr>
-        <tr>
-            <td>2019.2</td>
-            <td>Física Geral II</td>
-            <td>64</td>
-            <td>02</td>
-            <td>98.43</td>
-            <td>8</td>
-            <td>APROVADO MÉDIA</td>
-        </tr>
-        <tr>
-            <td>2019.2</td>
-            <td>Álgebra Linear</td>
-            <td>64</td>
-            <td>02</td>
-            <td>100</td>
-            <td>10</td>
-            <td>APROVADO MÉDIA</td>
-        </tr>
-        <tr>
-            <td>2019.2</td>
-            <td>Desenho para Engenharia</td>
-            <td>64</td>
-            <td>02A</td>
-            <td>100</td>
-            <td>8.5</td>
-            <td>APROVADO MÉDIA</td>
-        </tr>
-        <tr>
-            <th colspan="7">2020.1</th>
-        </tr>
-        <tr>
-            <td>2020.1</td>
-            <td>Estruturas de Dados</td>
-            <td>64</td>
-            <td>01</td>
-            <td>100</td>
-            <td>9.5</td>
-            <td>APROVADO MÉDIA</td>
-        </tr>
-        <tr>
-            <td>2020.1</td>
-            <td>Cálculo Vetorial</td>
-            <td>64</td>
-            <td>01</td>
-            <td>100</td>
-            <td>10</td>
-            <td>APROVADO MÉDIA</td>
-        </tr>
-        <tr>
-            <td>2020.1</td>
-            <td>Física Geral III</td>
-            <td>64</td>
-            <td>01</td>
-            <td>100</td>
-            <td>9</td>
-            <td>APROVADO MÉDIA</td>
-        </tr>
-        <tr>
-            <td>2020.1</td>
-            <td>Física Experimental II</td>
-            <td>32</td>
-            <td>01</td>
-            <td>100</td>
-            <td>10</td>
-            <td>APROVADO MÉDIA</td>
-        </tr>
-        <tr>
-            <th colspan="7">2020.2</th>
-        </tr>
-        <tr>
-            <td>2020.2</td>
-            <td>Circuitos Elétricos I</td>
-            <td>96</td>
-            <td>01A</td>
-            <td>100</td>
-            <td>8</td>
-            <td>APROVADO MÉDIA</td>
-        </tr>
-        <tr>
-            <td>2020.2</td>
-            <td>Eletrônica Digital</td>
-            <td>96</td>
-            <td>01B</td>
-            <td>100</td>
-            <td>9</td>
-            <td>APROVADO MÉDIA</td>
-        </tr>
-        <tr>
-            <td>2020.2</td>
-            <td>Arquitetura e Organização de Computadores</td>
-            <td>64</td>
-            <td>01</td>
-            <td>100</td>
-            <td>8.8</td>
-            <td>APROVADO MÉDIA</td>
-        </tr>
-    </table>
+    <br />
 
-    <form name="form_login" action="painel_de_controle.html" method="post">
-        <input type="submit" value="Voltar para o Painel de Controle">
-    </form>
-    
-    <footer>SIGAA|Copyright @ 2010 - 2022 - Superintendência de Tecnologia da Informação - UFC</footer>    
-</body>
+    <div class="btn-group">
+      <a
+        href="painel-de-controle.html"
+        class="btn btn-primary active"
+        aria-current="page"
+        >Voltar para o Painel de Controle</a
+      >
+      <a href="#" class="btn btn-primary">Baixar Histórico</a>
+    </div>
+
+    <footer class="footer-paginas">
+      SIGAA|Copyright @ 2010 - 2022 - Superintendência de Tecnologia da
+      Informação - UFC
+    </footer>
+  </body>
 </html>

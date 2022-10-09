@@ -5,171 +5,230 @@
     box-sizing: border-box;
   }
 
-  body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    background-color: rgb(202, 250, 242);
-  }
-  
-  header, footer{
-    background: #3e8a57;
-    color: #fff;
-    width: 100%;
-    padding: 0.5rem;
-    display: flex;
-    justify-content: center;
-  }
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  background-color: rgb(202, 250, 242);
+}
 
-  footer{
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    bottom: 0;
-  }
+header, footer{
+  background: #3e8a57;
+  color: #fff;
+  width: 100%;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
 
-  
-  nav a{
-    background-color: rgb(97, 218, 207);
-    padding: 10px;
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: bold;
-    margin-left: 10px;
-  }
-
-  .form-login{
-    max-width: 1000px;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-  }
-
-  #login{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  #titulo-entrar{
-    font-size: 25px;
-    color: #068a41;
-    padding: 2px 0 10px 0;
-    font-family: times;
-    font-weight: bold;
-    text-align: center;
-  }
-  #titulo-entrar:after{
-    content: ' ';
-    display: block;
-    width: 100%;
-    height: 2px;
-    margin-top: 5px;
-    background: -webkit-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
-    background: linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
-  }
-
-  #login-cadastro{
-    display: flex;
-    justify-items: center;
-  }
-
-  #login-entrar{
-    height: 400px;
-    width: 400px;
-    border: 2px solid rgb(41, 204, 150);
-    padding: 50px;
-    margin: 20px;
-    background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0NBwcHCA0IBwcHBw0HBwcHDQ8ICQcNFREWFhURExMYHSggGBolGxMTITEhMSk3Li4uFx8zOD8sNygtLisBCgoKDQ0NDg0NDzcZFRkrNzcrLS0rKy0tNy0rKysrKzc3LS03LSstKysrKysrKysrKy0rKysrKysrKysrKysrK//AABEIAJ8BPgMBIgACEQEDEQH/xAAZAAEBAQEBAQAAAAAAAAAAAAAAAQIDBAf/xAAbEAEBAQEBAQEBAAAAAAAAAAAAEQESAhMDQf/EABgBAQEBAQEAAAAAAAAAAAAAAAEAAgUD/8QAFxEBAQEBAAAAAAAAAAAAAAAAABEBEv/aAAwDAQACEQMRAD8A+uAOY8wBAEClEK0FECmsVkrWBtcYq1rFW1rOataw1qrWKtaVbKxVpVapWaVGtUZpUqqalShLUKlZ0GoVGNQglZ1KIMkVCgqgBAAQAkIIgqAQCFIUSjQWqyVpVulZpWsFbq1zq0qt1a50rSrpSudKqq60rnSmqulK50oprpUrFKKq1Ss0o1ValSlZVUZpWdLQyrJURQQAEACEAIRdQgQQgBCyohSASjWBorNK0K1SsUpFbpWKUit0rFKlW6tc6tVVbpWKVU1ulZpRTWqVmlBrVGVrJVWQFoQZKqgCqooIAigaiQCJlACE0NQgRULIUQgBCyqUQhaVAhaVApatZEmioAtFQBaoyoKqytDWKqAKmAGmhFBFQBVUEUEABAIEVCBFQhAEygqEJoBAioWQBKABogAqoKApFRURUUFUFDQuIoJiooIqCLQgCoCLNEAFECFQCgAhBRBkWBDKNEQZFghEFDVEFFVEFBVEFIlAWCMBSIxFURAUEwBIAoIIAtDIEgyIKIUhqjNWlNDNVJVRWkQiiDMI3CGKOcI6RIIo5wjpEiijA3ynKEZGuV5RjEWNRYooxFjcIoozCNQhhZiqgSAlCVCpUlqVCspSs1UVogEyIIKM0pDQzSpNVaxVpTdazXOrmlOmauOea3mkt4rGa1mtJqEM1rCWeTl0xYYo5cHDryvK5UceDl25SLlRz5Tl1jOqJiEa1ndCTU03Wd1kLus7qbrO6E1us1KlAq0rNShVqjNKFWis1QlEEUQRBRmiC0qVKQ1Ss0qVbq5rnTPRVdc1enLo6KrvnprPTz56az0TXoz03np5c9tZ7apr156az08ufoufoaa9Wel6eb6H0PRr09Jvp5/om/oulXffTO+nHf0Z39BRXXfTO+nLfbO+2aK676Z305b6ToCum+krnSgVupWKUKtUrNKFWqVmqk0M1QVVERSiCAVEQVBCFpWRBaVmlIapWCpVur051KRXXpe3GnSVdu1+jhWd9I9PT9F+ry9J0qunr+qfR5el6VXT0/RPo4dHSq6d+06cqVKunS3+uZUq6b6SsUCrdKzVRapWQJpayqLVXNYqgtFQRf/Z");
-    background-size: 100% 100%;
-  }
-
-  
-  input[type="submit"]{
-    width: 100%;
-    cursor: pointer;  
-    background: rgb(61, 157, 179);
-    padding: 8px 5px;
-    color: #fff;
-    font-size: 15px;  
-    border: 1px solid #fff;   
-    margin-bottom: 10px;  
-    text-shadow: 0 1px 1px #333;
-    -webkit-border-radius: 5px;
-    border-radius: 30px;
-  }
-
-  #butoes-iniciais{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  #painel-principal{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
+.footer-paginas{
+  display: flex;
+  position: absolute;
+  bottom: 0;
+}
 
 
-  #butoes-iniciais2{
-    display: flex;
-    justify-content: flex-end;
-  }
+nav a{
+  background-color: rgb(97, 218, 207);
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-left: 10px;
+}
 
-  #butoes-iniciais2 button{
-    background-color: #3e8a57;
-    margin-top: 5px;
-  }
+.form-login{
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
 
-  #perfil{
-    display: grid;
-    grid-template-columns: 0.3fr 1fr;
-    border: 3px solid #068a41;
-  }
+#login{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+}
 
-  #foto-de-perfil{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin: 5px;
-  }
+#titulo-entrar{
+  font-size: 25px;
+  color: #068a41;
+  padding: 2px 0 10px 0;
+  font-family: times;
+  font-weight: bold;
+  text-align: center;
+}
+#titulo-entrar:after{
+  content: ' ';
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 5px;
+  background: -webkit-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
+  background: linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
+}
 
-  #informacoes-perfil{
-    display: inline-block;
-    margin: 5px;
-  }
+#login-cadastro{
+  display: flex;
+  justify-items: center;
+}
 
-  #versao-sistema{
-    display: flex;
-    align-self: flex-end;
-    margin-top: 300px;
-  }
+#login-entrar{
+  height: 400px;
+  width: 400px;
+  border: 2px solid rgb(41, 204, 150);
+  padding: 50px;
+  margin: 20px;
+  background-image: url(/imagens/fundo-login.jpg);
+  background-size: 100% 100%;
+}
 
-  #resumo-atividades{
-    display: flex;
-    justify-content: center;
-  }
+.butao{
+  cursor: pointer;  
+  background: rgb(233, 233, 233);
+  padding: 8px 5px;
+  font-size: 15px;  
+  border: 1px solid #fff;   
+  margin-bottom: 10px;  
+  border-radius: 30px;
+}
+
+#butao-login{
+  cursor: pointer;  
+  background: rgb(33, 93, 19);
+  color: white;
+  padding: 8px 5px;
+  font-size: 15px;  
+  border: 1px solid #fff;   
+  margin-bottom: 10px;  
+  border-radius: 30px;
+  width: 150px;
+  margin-left: 60px;
+}
+
+a{
+  text-decoration: none;
+}
+
+#butoes-iniciais{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #eaf9ef;
+  box-shadow: 2px 2px 2px 2px rgb(78, 244, 133);
+  margin-bottom: 15px;
+}
+
+#painel-principal{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+#butoes-iniciais2{
+  display: flex;
+  justify-content: flex-end;
+}
+
+#butoes-iniciais2 button{
+  background-color: #3e8a57;
+  margin-top: 5px;
+}
+
+#perfil{
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+}
+
+#foto-de-perfil{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+  margin: 5px;
+}
+
+#curriculo{
+  align-self: center;
+}
+
+#informacoes-perfil{
+  display: inline-block;
+  margin: 5px;
+}
+
+#versao-sistema{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+  margin: 50px;
+}
+
+#resumo-atividades{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
   
 table{
     background-color: white;
     box-shadow: 10px 5px 5px rgb(92, 236, 140);
   }
-  th{
-    background-color: rgb(92, 236, 140);
-  }
+th{
+  background-color: rgb(92, 236, 140);
+}
 
-  h2{
-    color: rgb(7, 146, 41);
-    text-align: center;
-    font-family: courier;
-  }
-  h3{
-    color: rgb(7, 146, 41);
-    text-align: center;
-    font-weight: bold;
-  }
+h2{
+  color: rgb(7, 146, 41);
+  text-align: center;
+  font-family: courier;
+}
+h3{
+  color: rgb(7, 146, 41);
+  text-align: center;
+  font-weight: bold;
+}
 
-  #butao-infPes{
-    display: flex;
-    gap: 15px;
-  }
+#butao-infPes{
+  display: flex;
+  gap: 15px;
+}
+
+.input-editar-informacoes{
+  display: block;
+  width: 300px;
+  border-radius: 5px;
+}
+
+#atividades-cadastradas{
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin: 20px;
+  height: 100vh;
+  width: 100vw;
+}
+
+.row{
+  display: flex;
+}
+
+#container-paineldecontrole{
+  width: 100%;
+  height: 100vh;
+  padding: 5px;
+}
+
+#progresso{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-left: 50px;
+}
+
+#legenda{
+  margin-left: 500px;
+}
+

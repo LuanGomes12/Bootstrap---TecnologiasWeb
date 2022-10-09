@@ -12,7 +12,7 @@
 
 <body>
     <header>UFC - SIGAA -  Sistema Integrado de Gestão de Atividades Acadêmicas</header>
-    <div id="container">
+    <div id="container-paineldecontrole">
         <div id="butoes-iniciais">
             <div>
                 <nav class="navbar navbar-expand-lg bg">
@@ -20,16 +20,16 @@
                       <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                           <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="painel-de-controle1.html">Painel de Controle</a>
+                            <a class="nav-link active" aria-current="page" href="painel-de-controle.html">Painel de Controle</a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="editar-informacoes.html">Editar informações</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link active" href="historico1.html">Histórico</a>
+                            <a class="nav-link active" href="historico.html">Histórico</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link active" href="#">Cadastro de componentes curriculares</a>
+                            <a class="nav-link active" href="cadastro-de-materias.html">Cadastro de componentes curriculares</a>
                           </li>
                         </ul>
                       </div>
@@ -39,13 +39,13 @@
             <div id="butoes-iniciais2">
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown button
+                      <img src="/imagens/icone-configuracoes.svg" alt="">
                     </button>
                     <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="#">Consultas</a></li>
                       <li><a class="dropdown-item" href="#">Documentos</a></li>
                       <li><a class="dropdown-item" href="#">Seleção em projetos</a></li>
-                      <li><a class="dropdown-item" href="index1.html">Sair</a></li>
+                      <li><a class="dropdown-item" href="login.html">Sair</a></li>
                     </ul>
                 </div>
             </div>
@@ -54,10 +54,10 @@
         <div id="painel-principal">
             <div id="perfil">
                 <div id="foto-de-perfil">
-                    <div><img src="FotoDePerfil.jpg" width="150" height="150"></div>
-                    <div>
+                    <div><img src="/imagens/FotoDePerfil.jpg" width="150" height="150"></div>
+                    <div id="curriculo">
                         <p>
-                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                            <button style="background-color:  rgb(61, 157, 179);" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
                                 Currículo
                             </button>
                         </p>
@@ -142,12 +142,25 @@
                       </div>
                 </div>
                 <br>
-                <h4 id="display-cor">Escolha um cor para o tema: <input type="color"></h4>
+                <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                    <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btncheck1">Trabalho: Sist. Lineares (06/10)</label>
+                  
+                    <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btncheck2">Prova: Química (01/10)</label>
+                  
+                    <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btncheck3">Prova: Eng. Econômica (20/10)</label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btncheck4">Trabalho: HIST (15/10)</label>
+                  
+                  </div>
             </div>
 
             <div>
                 <h3>Progresso no curso</h3>
-                <div id="div-p3">
+                <div id="progresso">
                     <label for="file">Disciplinas obrigatórias:</label>
                     <div class="progress">
                         <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">85%</div>
@@ -195,32 +208,32 @@
                 </table>       
             </div>
         </div> 
-    </div>
-    <br>
 
-
-    <div id="versao-sistema">
-        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
-            Versão do Sistema
-        </button>
-          
-        <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="staticBackdropLabel"> Novo-SIGAA versão 2.0</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <div id="versao-sistema">
+            <div>
+                <img src="/imagens/icone-cor.svg" alt="" height="30px" ><input type="color">
             </div>
-            <div class="offcanvas-body">
-              <div>
-                Implementação de boostrap no projeto Novo-SIGGA. 
-                Desenvolvido para disciplina Tecnologias Web.
-                <b>Autor: Luan Gomes</b>
-              </div>
+            <div>
+                <button style="background-color:  rgb(61, 157, 179);" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                    Versão do Sistema
+                </button>
+                  
+                <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="staticBackdropLabel"> Novo-SIGAA versão 2.0</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <div>
+                        Implementação de boostrap no projeto Novo-SIGGA. 
+                        Desenvolvido para disciplina Tecnologias Web.
+                        <b>Autor: Luan Gomes</b>
+                      </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <footer class="footer-paginas">SIGAA|Copyright @ 2010 - 2022 - Superintendência de Tecnologia da Informação - UFC</footer>
     </div>
-
-    
-
-    <footer>SIGAA|Copyright @ 2010 - 2022 - Superintendência de Tecnologia da Informação - UFC</footer>
 </body>
 </html>

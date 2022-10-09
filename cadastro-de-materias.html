@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Perfil do Usuário</title>
+    <title>Cadastro de Matérias</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -19,8 +19,8 @@
     <link rel="stylesheet" href="style.css" />
 
     <style>
-      .fundo {
-        background: rgb(92, 236, 140);
+      .titulo-materias {
+        background-color: rgb(5, 219, 141);
       }
     </style>
   </head>
@@ -28,6 +28,7 @@
     <header>
       UFC - SIGAA - Sistema Integrado de Gestão de Atividades Acadêmicas
     </header>
+
     <nav class="navbar navbar-expand-lg bg">
       <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -62,55 +63,19 @@
     </nav>
 
     <br />
-    <h2>Perfil do Usuário</h2>
-    <button type="button" class="btn btn-primary" id="liveToastBtn">
-      Informações!!!
+    <h2>Cadastro de Componentes Curriculares</h2>
+    <button class="butao">
+      <a href="verificar-atividades-complementares.html"
+        >Consultar Atividades Cadastradas</a
+      >
     </button>
 
-    <div class="toast-container position-fixed bottom-0 end-0 p-3">
-      <div
-        id="liveToast"
-        class="toast"
-        role="alert"
-        aria-live="assertive"
-        aria-atomic="true"
-      >
-        <div class="toast-header">
-          <strong class="me-auto">Alterações</strong>
-          <small>05/08/2022</small>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="toast"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div class="toast-body">Atulizações feitas no CPF.</div>
-      </div>
-    </div>
-
-    <script>
-      const toastTrigger = document.getElementById('liveToastBtn')
-      const toastLiveExample = document.getElementById('liveToast')
-      if (toastTrigger) {
-        toastTrigger.addEventListener('click', () => {
-          const toast = new bootstrap.Toast(toastLiveExample)
-
-          toast.show()
-        })
-      }
-    </script>
-
-    <form name="form_login" action="painel-de-controle1.html" method="post">
-      <div>
-        Matrícula:
-        <input
-          class="input-editar-informacoes"
-          type="number"
-          name="numero"
-          value=""
-        />
-      </div>
+    <form name="form_login" action="painel-de-controle.html" method="post">
+      <label class="titulo-materias" for="selecione">Tipo de Atividade:</label>
+      <select name="selecione" id="selecione">
+        <option value="valor1">Horas Complementares</option>
+        <option value="valor2">Horas de Extensão</option>
+      </select>
       <div>
         Nome:
         <input
@@ -121,26 +86,16 @@
         />
       </div>
       <div>
-        Curso:
+        Horas:
         <input
           class="input-editar-informacoes"
-          type="text"
+          type="number"
           name="curso"
           value=""
         />
       </div>
       <div>
-        Sexo:
-        <input
-          class="input-editar-informacoes"
-          type="text"
-          maxlength="1"
-          name="sexo"
-          value=""
-        />
-      </div>
-      <div>
-        Data de Nascimento:
+        Data:
         <input
           class="input-editar-informacoes"
           type="date"
@@ -149,26 +104,82 @@
         />
       </div>
       <div>
-        CPF:
+        Email:
+        <input
+          class="input-editar-informacoes"
+          type="email"
+          name="email"
+          value=""
+        />
+      </div>
+      <div>
+        Telefone do responsável:
         <input
           class="input-editar-informacoes"
           type="number"
-          name="cpf"
+          name="telefone"
           value=""
         />
       </div>
       <br />
-      <div id="butao-infPes">
-        <div>
-          <button class="butao">
-            <a href="painel-de-controle.html">Salvar informações</a>
-          </button>
-        </div>
-        <div class="spinner-border text-success" role="status">
-          <span class="visually-hidden">Loading...</span>
+    </form>
+
+    <!-- Button trigger modal -->
+    <button
+      style="background-color: rgb(61, 157, 179)"
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
+      Salvar informações
+    </button>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Deseja cadastrar a nova atividade?
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Todas as informações colocadas são de responsabilidade do aluno.
+          </div>
+          <div class="modal-footer">
+            <button
+              style="color: black"
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancelar
+            </button>
+            <button type="button" class="btn btn-primary">
+              <a
+                class="cor-botao"
+                style="color: black"
+                href="painel-de-controle.html"
+                >Salvar</a
+              >
+            </button>
+          </div>
         </div>
       </div>
-    </form>
+    </div>
 
     <footer class="footer-paginas">
       SIGAA|Copyright @ 2010 - 2022 - Superintendência de Tecnologia da
